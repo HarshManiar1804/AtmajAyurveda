@@ -211,20 +211,18 @@ section:nth-child(even) {
 }
 
 .btn-group button {
-  background-color:var(--green) ; /* Green background */
-  border: 5px solid var(--black); /* Green border */
-  color: white; /* White text */
-  padding: 10px 20px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
+  background-color:var(--green) ; 
+  border: 5px solid var(--black);
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer; 
   float: left; 
   width: 100%;
-  /* border-radius: 10px; */
   margin: 0.5%;
   padding: 1%;
   font-size: medium;
 }
 
-/* Clear floats (clearfix hack) */
 .btn-group:after {
   content: "";
   clear: both;
@@ -232,10 +230,7 @@ section:nth-child(even) {
 }
 
 .btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
-
-/* Add a background color on hover */
+  border-right: none; }
 .btn-group button:hover {
   background-color: #3e8e41;
 }
@@ -323,6 +318,7 @@ section:nth-child(even) {
 
 .about .row .content {
   flex: 1 1 45rem;
+  margin: 20px;
 }
 
 .about .row .content h3 {
@@ -569,97 +565,101 @@ section:nth-child(even) {
   line-height: 1.8;
   padding: 1rem 0;
 }
+.footer {
+  background-color: #333;
+  color: var(--black);
+  padding: 50px 20px; /* Adjust padding for smaller screens */
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: start; /* Center content horizontally */
+  text-align: left; 
+}
 
 .footer .box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-  gap: 2rem;
-}
-
-.footer .box-container .box h3 {
-  font-size: 2.5rem;
-  color: var(--black);
-  padding: 1rem 0;
-}
-
-.footer .box-container .box a {
-  display: block;
-  font-size: 1.5rem;
-  color: var(--light-color);
-  padding: 1rem 0;
-}
-
-.footer .box-container .box a i {
-  padding-right: 0.5rem;
-  color: var(--green);
-}
-
-.footer .box-container .box a:hover i {
-  padding-right: 2rem;
-}
-
-.footer .credit {
-  padding: 1rem;
-  padding-top: 2rem;
-  margin-top: 2rem;
-  text-align: center;
-  font-size: 2rem;
-  color: var(--light-color);
-  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-}
-
-.footer .credit span {
-  color: var(--green);
-}
-/* Popup styles */
-/* .popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid #ccc; */
-/* background-color: #fff;
-  padding: 20px;
-  z-index: 9999;
-  max-width: 80%;
-  max-height: 80%;
-  overflow-y: auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  box-shadow: 0.1rem 0.1rem 0 rgba(22, 160, 133, 0.2);
-  border: var(--border);
-  padding: 2.5rem;
-  color: var(--green); */
-/* font-size: 5rem; */
-/* border-radius: 0.15rem; */
-/* }  */
-
-/* .popup.open {
-  opacity: 1;
-  pointer-events: auto;
-} */
-
-/* .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
+  max-width: 1200px;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9998;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-} */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
-/* .overlay.open {
-  opacity: 1;
-  pointer-events: auto;
-}  */
+.footer .box {
+  flex: 1;
+  padding: 0 10px; /* Adjust padding for smaller screens */
+  margin-bottom: 30px; /* Add space between boxes */
+  max-width: 400px; /* Limit box width */
+  width: 100%;
+}
 
-/* media queries  */
+.footer .box h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--green);
+}
+
+.footer .box p,
+.footer .box a {
+  margin: 0;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.footer .box a {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.footer .box a:hover {
+  text-decoration: underline;
+}
+
+.footer .box i {
+  margin-right: 10px;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.box {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.box h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--black);
+}
+
+.box p, .box a {
+  margin: 0;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.box a {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--green);
+  text-decoration: none;
+}
+
+.box a:hover {
+  text-decoration: underline;
+}
+
+.box i {
+  margin-right: 10px;
+}
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -712,8 +712,6 @@ section:nth-child(even) {
     font-size: 50%;
   }
 }
-
-/* Close button styles */
 .close {
   position: absolute;
   top: 10px;
@@ -728,7 +726,6 @@ section:nth-child(even) {
 .close:hover {
   color: #555;
 }
-/* Styles for the popup */
 .popup {
   width: 90%;
   height: 80%;
@@ -746,7 +743,6 @@ section:nth-child(even) {
   z-index: 1000;
   border-color: var(--green);
 }
-/* Style for the overlay */
 .overlay {
   display: none;
   position: fixed;
@@ -763,15 +759,14 @@ section:nth-child(even) {
   margin-bottom: 15px;
   padding-bottom: 10px;
   position: fixed;
-  top: 20px; /* Adjust as needed */
-  left: 20px; /* Adjust as needed */
-  border: 1px solid #ccc;
+  top: 20px; 
+  left: 20px;  border: 1px solid #ccc;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px; /* Adjust width as needed */
-  z-index: 999; /* Ensure it appears above other content */
+  width: 300px; 
+  z-index: 999; 
 }
 
 
@@ -819,4 +814,58 @@ section:nth-child(even) {
   .content {
       flex: 0 0 60%;
   }
+}
+
+.hospital-contact {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px; 
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hospital-contact p {
+  margin: 0;
+  flex: 1;
+}
+
+.hospital-contact a {
+  display: flex;
+  align-items: center;
+  color: var(--green); 
+  text-decoration: none;
+}
+
+.hospital-contact a:hover {
+  text-decoration: underline;
+}
+.hospital-contact1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 600px; /* Adjust max-width as needed */
+}
+
+.hospital-contact1 div {
+  margin-bottom: 10px; 
+}
+
+.hospital-contact1 a {
+  display: flex;
+  align-items: center;
+  color: var(--green); 
+  text-decoration: none;
+}
+
+.hospital-contact1 a:hover {
+  text-decoration: underline;
+}
+
+.hospital-contact1 i {
+  margin-right: 10px;
+  font-size: 20px;
 }
